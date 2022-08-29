@@ -1,7 +1,7 @@
 package org.ultimatecompbg;
 
 import java.util.Scanner;
-
+//DA: Do it in separate class. Use Runnable
 public class Main extends Thread {
     private int number = 0;
     public static void main(String[] args){

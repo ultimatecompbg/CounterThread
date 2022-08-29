@@ -1,3 +1,4 @@
 # Project exclude paths
 /target/
-.idea
+.idea 
+//DA: Fix class file to be ignored
