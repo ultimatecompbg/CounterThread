@@ -2,25 +2,15 @@ package org.ultimatecompbg;
 
 import java.util.Scanner;
 
-public class Main extends Thread {
-    private int number = 0;
+public class Main {
+
     public static void main(String[] args){
-        Main thread = new Main();
+        Runnable runnable = new Counter();
+        Thread thread = new Thread(runnable);
         thread.start();
         Scanner scanner = new Scanner(System.in);
         scanner.nextLine();
         thread.interrupt();
     }
-    public void run() {
-            while(number < 1000){
-                try{
-                    Thread.sleep(1000);
-                }
-                catch(Exception e) {
-                    System.out.println(number);
-                    break;
-                }
-                number++;
-            }
-    }
+
 }
